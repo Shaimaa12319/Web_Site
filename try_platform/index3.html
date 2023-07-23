@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- =======================   Style  =======================   -->
+    <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/dropzone.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+</head>
+
+<body>
+        <!-- Here is the DropZone -->
+
+        
+     
+       
+
+        <!-- End of dropzone -->
+
+        
+    <!-- =========================    Navigation  ==================      -->
+    <div class="contain">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="title">الشركاء</span>
+                        <span class="icon">
+                            <ion-icon name="accessibility-outline"></ion-icon>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index2.html">
+                        <span class="title">لوحة التحكم</span>
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="title">المنتجات</span>
+                        <span class="icon">
+                            <ion-icon name="apps-outline"></ion-icon>
+                        </span>
+                    </a>
+                </li>
+                   <li>
+                    <a href="index4.html">
+                        <span class="title">الكوبونات </span>
+                        <span class="icon">
+                            <ion-icon name="pricetags-outline"></ion-icon>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="title">المتاجر التجريبية </span>
+                        <span class="icon">
+                            <ion-icon name="storefront-outline"></ion-icon>
+                        </span>
+                    </a>
+                </li>
+             
+                <li>
+                    <a href="#">
+                        <span class="title">الاسئلة الشائعه</span>
+                        <span class="icon">
+                            <ion-icon name="help-outline"> </ion-icon>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="title">Settings</span>
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                            </ion-icon>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="title">Password</span>
+                        <span class="icon">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="title">sign out</span>
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ============================ main ============================== -->
+
+        <div class="main ">
+            <div class="topbar">
+                <div class="user">
+                    <img src="imgs/pro4.png" alt="">
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+            </div>
+
+            <!--  =========================  Item  ======================== -->
+
+            <div align="right" class="container">
+                <div class="add">
+                    <span><button type="button" class="btn btn-primary"
+                        onclick="$('.add ul li').toggleClass('new');">اضافة منتج</button></span>
+                        <ul>
+                            <li class="new">
+                                <a href="#"
+                                onclick="$('#row').prepend($('.col .new').clone(true));$('#row').children('.new').first().removeClass('new');">
+                                <span class="icon">
+                                    <ion-icon name="apps-outline"></ion-icon>
+                                </span>
+                                <span class="title">اضافة منتج جاهز</span>
+                            </a>
+                        </li>
+                        <li class="new">
+                            <a href="#">
+                                <span class="icon">
+                                    <ion-icon name="apps-outline"></ion-icon>
+                                </span>
+                                <span class="title">تطبيقاتي</span>
+                            </a>
+                        </li>
+                        <li class="new">
+                            <a href="#">
+                                <span class="icon">
+                                    <ion-icon name="apps-outline"></ion-icon>
+                                </span>
+                                <span class="title">تطبيقاتي</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="row" class="row" style="direction:rtl;">
+                    <div id="new" class="col col-md-4 col-sm-12 new">
+                        <div class="card">
+                            <div class="item img">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                                   Open modal
+                                 </button>
+                                 <!-- The Modal -->
+                                 <div class="modal fade" id="myModal">
+                                   <div class="modal-dialog">
+                                     <div class="modal-content">
+
+                                 
+                                       <!-- Modal Header -->
+                                       <div class="modal-header">
+                                         <h4 class="modal-title">Modal Heading</h4>
+                                       ,<span><button type="button" class="btn-close" data-bs-dismiss="modal"></button></span> 
+                                       </div>
+                                       <!-- Modal body -->
+                                       <div class="modal-body">
+                                         Modal body..
+                                          <form action="upload.php" class="dropzone border-2 border-danger w-50 ">
+                                 
+                                         </form>
+                                       </div>
+                                       <!-- Modal footer -->
+                                       <div class="modal-footer">
+                                         <button type="button"  class="btn btn-success btn-lg" style="width: 100%;" data-bs-dismiss="modal">حفظ</button>
+                                       </div>
+                                 
+                                     </div>
+                                   </div>
+                                 </div>
+                                </div>
+                                <div class="item">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="item">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="item">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="item">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="item">
+                                    <select>
+                                        <option value="0"><a href="#">تصنيف 1 </a></option>
+                                        <option value="1"><a href="#">تصنيف 2 </a></option>
+                                        <option value="2"><a href="#">تصنيف 3 </a></option>
+                                    </select>
+                                    <input type="button" data-bs-toggle="modal"class="btn btn-defalute btn-sm" value="اضافة تصنيف">
+                                </div>
+                                <!--=================== start model ==============================================-->
+                                
+                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                                    Open modal
+                                  </button>
+                                
+                                
+                                <!-- The Modal -->
+                                <div class="modal fade" id="myModal">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                
+                                      <!-- Modal Header -->
+                                      <div class="modal-header">
+                                        <h4 class="modal-title">Modal Heading</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                      </div>
+                                      <!-- Modal body -->
+                                      <div class="modal-body">
+                                          Modal body..
+                                      </div>
+                                      <!-- Modal footer -->
+                                      <div class="modal-footer">
+                                          <button type="button"  class="btn btn-success btn-lg" style="width: 100%;" data-bs-dismiss="modal">حفظ</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <button type="submit" class="btn btn-success btn-lg" style="width: 100%;">حفظ</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            
+                                      
+              <!--===================================card one ================================================-->  
+                <div class="col col-md-4 col-sm-12">
+                   <div class="card">
+                     <div class="item img">
+                        <img src="imgs/pro2.png" width="100%">
+                        </div>
+                     <div class="item">
+                     <input type="text" class="form-control" name="product" class="form-control" placeholder=" &#128525 اسم المنتج" >
+                        </div>
+                     <div class="item">
+                        <input type="text" class="form-control" placeholder="&#128517 السعر ">
+                        </div>
+                     <div class="item">
+                        <input type="text" class="form-control" placeholder="&#128512الكمية المتوفره">
+                        </div>
+                    
+                         <div class="input-group mb-3"style="direction: rtl;">
+                                  
+                                    <select class="form-control">
+                     <option value="0"><a href="#">اختر تصنيف المنتج </a></option>
+                     <option value="1"><a href="#">تصنيف 2 </a></option>
+                     <option value="2"><a href="#">تصنيف 3 </a></option>
+                       </select>
+                       <button type="button"  class="form-control"  class="btn btn-primary"  placeholder="  اضف التصنيف" data-bs-toggle="modal" data-bs-target="#myMdal3">
+                           اضف تصنيف
+                         </button>
+                           <!-- The Modal -->
+                         <div class="modal fade" id="myMdal3">
+                           <div class="modal-dialog">
+                             <div class="modal-content">
+                         
+                               <!-- Modal Header -->
+                               <div class="modal-header">
+                                
+                                 <h4 class="modal-title"> اضف تصنيف </h4>
+                                   <!-- <span class="btn-close" data-bs-dismiss="modal"></span>-->
+                               <span> <button type="button" class="btn-close"  data-bs-dismiss="modal"></button></span>
+                               </div>
+                                <div class="modal-body" >
+                                   
+                              <label for="sel1" class="form-label"  placeholder="اسم التصنيف "> اسم التصنيف</label>
+                              <div class="input-group mb-3">
+                                   <input type="text" class="form-control" style="width: 75%;" placeholder=" &#128516اسم التصنيف">
+                                       <select class="form-select"  id="sel1" style="width:2px ;" name="sellist1">
+                               <option> AR </option>
+                               <option>EN</option>
+                            
+                             </select>
+                            
+                           <form style="margin-top:10px ;">
+                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                                <label for="vehicle1"> اضافة الى تصنيف رئيسي</label><br>
+                            </form>
+                                  
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="but" >
+                                    <button type="button"  class="btn btn-success btn-lg"   data-bs-dismiss="modal">حفظ</button>
+                                </div>
+                                <div class="but" >
+                                    <button type="button" class="btn btn-success btn-lg"  data-bs-dismiss="modal">اضافة التصنيف</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item"> 
+                <div class="input-group mb-3"style="direction: rtl;">  
+                    <button type="button" class="form-control"  class="btn btn-primary"   data-bs-toggle="modal" data-bs-target="#myMdal">
+                        بيانات المنتج
+                    </button>
+                    <!-- The Modal -->
+                    <div class="modal fade" id="myMdal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                  <h4 class="modal-title">بيانات المنتج </h4>
+                                    <!-- <span class="btn-close" data-bs-dismiss="modal"></span>-->
+                                <span> <button type="button" class="btn-close"  data-bs-dismiss="modal"></button></span>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body" >
+                                  <ul >
+                                      <li>
+                               <label for="sel1" class="form-label"  placeholder="يتطلب شحن/توصيل؟ ">يتطلب شحن/توصيل؟</label>
+                              <select class="form-select" id="sel1" name="sellist1">
+                                <option>نعم,يتطلب شحن. </option>
+                                <option>لا,يتطلب شحن.</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="sel1" class="form-label"> وزن المنتج</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" name="product" class="form-control"  placeholder=" وزن المنتج">
+                                <span class="input-group-text">k.g</span>
+                            </div>
+                        </li>
+                        <li>
+                          <label for="sel1" class="form-label">  رمز التخزين</label>
+                           <input type="text" class="form-control" name="product" class="form-control"  placeholder="  رمز التخزين">
+                        </li>
+                        <li>
+                            <label for="sel1" class="form-label">   سعر التكلفه</label>
+                             <div class="input-group mb-3">
+                             <input type="text" class="form-control" name="product" class="form-control"  placeholder="   سعر التكلفه">
+                               <span class="input-group-text">ر.ي</span>
+                             </div>
+                          </li>
+                          <li>
+                              <label for="sel1" class="form-label">    السعر المخفض</label> <!-- Multiple inputs -->
+                              <div class="input-group mb-3">
+                                  <input type="text" class="form-control" placeholder="السعر المخفض">
+                                  <input type="text" class="form-control" placeholder=" نهاية التخفيض">
+                               </div>
+                           </li>
+                       </ul>
+                   </div>
+                   <!-- Modal footer -->
+                   <div class="modal-footer">
+                     <button type="button"  class="btn btn-success btn-lg" style="width: 100%;" data-bs-dismiss="modal">حفظ</button>
+                   </div>
+                </div>
+            </div>
+         </div>
+            <select  class="form-control">
+                <option value="0"><a href="#">المزيد </a></option>
+                <option value="1"><a href="#">تصنيف 2 </a></option>
+                <option value="2"><a href="#">تصنيف 3 </a></option>
+            </select>
+        </div>
+        <div class="item">
+        </div>
+        <button type="submit" class="btn btn-success btn-lg" style="width: 100%;">حفظ</button>
+    </div>
+</form>
+</div>
+</div>
+
+ 
+              <!-- ================================= card two=========================================-->
+                   <div class="col col-md-4 col-sm-12">
+                   <div class="card">
+                     <div class="item img">
+                        <img src="imgs/pro3.png" width="100%">
+                        </div>
+                     <div class="item">
+                     <input type="text" class="form-control" name="product" class="form-control" placeholder=" &#128525 اسم المنتج" >
+                        </div>
+                     <div class="item">
+                        <input type="text" class="form-control" placeholder="&#128517 السعر ">
+                        </div>
+                     <div class="item">
+                        <input type="text" class="form-control" placeholder="&#128512الكمية المتوفره">
+                        </div>
+                    
+                         <div class="input-group mb-3"style="direction: rtl;">
+                                  
+                                    <select class="form-control">
+                     <option value="0"><a href="#">اختر تصنيف المنتج </a></option>
+                     <option value="1"><a href="#">تصنيف 2 </a></option>
+                     <option value="2"><a href="#">تصنيف 3 </a></option>
+                       </select>
+                       <button type="button"  class="form-control"  class="btn btn-primary"  placeholder="  اضف التصنيف" data-bs-toggle="modal" data-bs-target="#myMdal3">
+                           اضف تصنيف
+                         </button>
+                           <!-- The Modal -->
+                         <div class="modal fade" id="myMdal3">
+                           <div class="modal-dialog">
+                             <div class="modal-content">
+                         
+                               <!-- Modal Header -->
+                               <div class="modal-header">
+                                
+                                 <h4 class="modal-title"> اضف تصنيف </h4>
+                                   <!-- <span class="btn-close" data-bs-dismiss="modal"></span>-->
+                               <span> <button type="button" class="btn-close"  data-bs-dismiss="modal"></button></span>
+                               </div>
+                                <div class="modal-body" >
+                                   
+                              <label for="sel1" class="form-label"  placeholder="اسم التصنيف "> اسم التصنيف</label>
+                              <div class="input-group mb-3">
+                                   <input type="text" class="form-control" style="width: 75%;" placeholder=" &#128516اسم التصنيف">
+                                       <select class="form-select"  id="sel1" style="width:2px ;" name="sellist1">
+                               <option> AR </option>
+                               <option>EN</option>
+                            
+                             </select>
+                            
+                           <form style="margin-top:10px ;">
+                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                                <label for="vehicle1"> اضافة الى تصنيف رئيسي</label><br>
+                            </form>
+                                  
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="but" >
+                                    <button type="button"  class="btn btn-success btn-lg"   data-bs-dismiss="modal">حفظ</button>
+                                </div>
+                                <div class="but" >
+                                    <button type="button" class="btn btn-success btn-lg"  data-bs-dismiss="modal">اضافة التصنيف</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item"> 
+                <div class="input-group mb-3"style="direction: rtl;">  
+                    <button type="button" class="form-control"  class="btn btn-primary"   data-bs-toggle="modal" data-bs-target="#myMdal">
+                        بيانات المنتج
+                    </button>
+                    <!-- The Modal -->
+                    <div class="modal fade" id="myMdal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                  <h4 class="modal-title">بيانات المنتج </h4>
+                                    <!-- <span class="btn-close" data-bs-dismiss="modal"></span>-->
+                                <span> <button type="button" class="btn-close"  data-bs-dismiss="modal"></button></span>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body" >
+                                  <ul >
+                                      <li>
+                               <label for="sel1" class="form-label"  placeholder="يتطلب شحن/توصيل؟ ">يتطلب شحن/توصيل؟</label>
+                              <select class="form-select" id="sel1" name="sellist1">
+                                <option>نعم,يتطلب شحن. </option>
+                                <option>لا,يتطلب شحن.</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="sel1" class="form-label"> وزن المنتج</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" name="product" class="form-control"  placeholder=" وزن المنتج">
+                                <span class="input-group-text">k.g</span>
+                            </div>
+                        </li>
+                        <li>
+                          <label for="sel1" class="form-label">  رمز التخزين</label>
+                           <input type="text" class="form-control" name="product" class="form-control"  placeholder="  رمز التخزين">
+                        </li>
+                        <li>
+                            <label for="sel1" class="form-label">   سعر التكلفه</label>
+                             <div class="input-group mb-3">
+                             <input type="text" class="form-control" name="product" class="form-control"  placeholder="   سعر التكلفه">
+                               <span class="input-group-text">ر.ي</span>
+                             </div>
+                          </li>
+                          <li>
+                              <label for="sel1" class="form-label">    السعر المخفض</label> <!-- Multiple inputs -->
+                              <div class="input-group mb-3">
+                                  <input type="text" class="form-control" placeholder="السعر المخفض">
+                                  <input type="text" class="form-control" placeholder=" نهاية التخفيض">
+                               </div>
+                           </li>
+                       </ul>
+                   </div>
+                   <!-- Modal footer -->
+                   <div class="modal-footer">
+                     <button type="button"  class="btn btn-success btn-lg" style="width: 100%;" data-bs-dismiss="modal">حفظ</button>
+                   </div>
+                </div>
+            </div>
+         </div>
+            <select  class="form-control">
+                <option value="0"><a href="#">المزيد </a></option>
+                <option value="1"><a href="#">تصنيف 2 </a></option>
+                <option value="2"><a href="#">تصنيف 3 </a></option>
+            </select>
+        </div>
+        <div class="item">
+        </div>
+        <button type="submit" class="btn btn-success btn-lg" style="width: 100%;">حفظ</button>
+    </div>
+</form>
+</div>
+</div>
+              <!-- ================================= card three =========================================-->
+                    <div class="col col-md-4 col-sm-12">
+                   <div class="card">
+                     <div class="item img">
+                        <img src="imgs/pro1.png" width="100%">
+                        </div>
+                     <div class="item">
+                     <input type="text" class="form-control" name="product" class="form-control" placeholder=" &#128525 اسم المنتج" >
+                        </div>
+                     <div class="item">
+                        <input type="text" class="form-control" placeholder="&#128517 السعر ">
+                        </div>
+                     <div class="item">
+                        <input type="text" class="form-control" placeholder="&#128512الكمية المتوفره">
+                        </div>
+                    
+                         <div class="input-group mb-3"style="direction: rtl;">
+                                  
+                                    <select class="form-control">
+                     <option value="0"><a href="#">اختر تصنيف المنتج </a></option>
+                     <option value="1"><a href="#">تصنيف 2 </a></option>
+                     <option value="2"><a href="#">تصنيف 3 </a></option>
+                       </select>
+                       <button type="button"  class="form-control"  class="btn btn-primary"  placeholder="  اضف التصنيف" data-bs-toggle="modal" data-bs-target="#myMdal3">
+                           اضف تصنيف
+                         </button>
+                           <!-- The Modal -->
+                         <div class="modal fade" id="myMdal3">
+                           <div class="modal-dialog">
+                             <div class="modal-content">
+                         
+                               <!-- Modal Header -->
+                               <div class="modal-header">
+                                
+                                 <h4 class="modal-title"> اضف تصنيف </h4>
+                                   <!-- <span class="btn-close" data-bs-dismiss="modal"></span>-->
+                               <span> <button type="button" class="btn-close"  data-bs-dismiss="modal"></button></span>
+                               </div>
+                                <div class="modal-body" >
+                                   
+                              <label for="sel1" class="form-label"  placeholder="اسم التصنيف "> اسم التصنيف</label>
+                              <div class="input-group mb-3">
+                                   <input type="text" class="form-control" style="width: 75%;" placeholder=" &#128516اسم التصنيف">
+                                       <select class="form-select"  id="sel1" style="width:2px ;" name="sellist1">
+                               <option> AR </option>
+                               <option>EN</option>
+                            
+                             </select>
+                            
+                           <form style="margin-top:10px ">
+                                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                                <label for="vehicle1"> اضافة الى تصنيف رئيسي</label><br>
+                            </form>
+                                  
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="but" >
+                                    <button type="button"  class="btn btn-success btn-lg"   data-bs-dismiss="modal">حفظ</button>
+                                </div>
+                                <div class="but" >
+                                    <button type="button" class="btn btn-success btn-lg"  data-bs-dismiss="modal">اضافة التصنيف</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item"> 
+                <div class="input-group mb-3"style="direction: rtl;">  
+                    <button type="button" class="form-control"  class="btn btn-primary"   data-bs-toggle="modal" data-bs-target="#myMdal">
+                        بيانات المنتج
+                    </button>
+                    <!-- The Modal -->
+                    <div class="modal fade" id="myMdal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                  <h4 class="modal-title">بيانات المنتج </h4>
+                                    <!-- <span class="btn-close" data-bs-dismiss="modal"></span>-->
+                                <span> <button type="button" class="btn-close"  data-bs-dismiss="modal"></button></span>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body" >
+                                  <ul >
+                                      <li>
+                               <label for="sel1" class="form-label"  placeholder="يتطلب شحن/توصيل؟ ">يتطلب شحن/توصيل؟</label>
+                              <select class="form-select" id="sel1" name="sellist1">
+                                <option>نعم,يتطلب شحن. </option>
+                                <option>لا,يتطلب شحن.</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="sel1" class="form-label"> وزن المنتج</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" name="product" class="form-control"  placeholder=" وزن المنتج">
+                                <span class="input-group-text">k.g</span>
+                            </div>
+                        </li>
+                        <li>
+                          <label for="sel1" class="form-label">  رمز التخزين</label>
+                           <input type="text" class="form-control" name="product" class="form-control"  placeholder="  رمز التخزين">
+                        </li>
+                        <li>
+                            <label for="sel1" class="form-label">   سعر التكلفه</label>
+                             <div class="input-group mb-3">
+                             <input type="text" class="form-control" name="product" class="form-control"  placeholder="   سعر التكلفه">
+                               <span class="input-group-text">ر.ي</span>
+                             </div>
+                          </li>
+                          <li>
+                              <label for="sel1" class="form-label">    السعر المخفض</label> <!-- Multiple inputs -->
+                              <div class="input-group mb-3">
+                                  <input type="text" class="form-control" placeholder="السعر المخفض">
+                                  <input type="text" class="form-control" placeholder=" نهاية التخفيض">
+                               </div>
+                           </li>
+                       </ul>
+                   </div>
+                   <!-- Modal footer -->
+                   <div class="modal-footer">
+                     <button type="button"  class="btn btn-success btn-lg" style="width: 100%;" data-bs-dismiss="modal">حفظ</button>
+                   </div>
+                </div>
+            </div>
+         </div>
+            <select  class="form-control">
+                <option value="0"><a href="#">المزيد </a></option>
+                <option value="1"><a href="#">تصنيف 2 </a></option>
+                <option value="2"><a href="#">تصنيف 3 </a></option>
+            </select>
+        </div>
+        <div class="item">
+        </div>
+        <button type="submit" class="btn btn-success btn-lg" style="width: 100%;">حفظ</button>
+    </div>
+</form>
+</div>
+</div>
+        <!--==========================end the cards ================================-->
+        
+             </div>
+         </div>
+
+
+         <!--================== script =========================-->
+         <script src="js/main.js"></script>
+         <script src="bootstrap/js/bootstrap.js"></script>
+         <script src="bootstrap/js/bootstrap.min.js"></script>
+         <script src="jquery-3.5.1.min.js"></script>
+
+         <!--================== ionicons =========================-->
+
+
+         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js">
+         </script>
+         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+         <script  src="js/dropzone.min.js"></script>
+</body>
+
+</html>
+                                                          
+                                                                                              
+
